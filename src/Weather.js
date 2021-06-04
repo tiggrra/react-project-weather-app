@@ -7,8 +7,23 @@ export default function Weather() {
         humidity: "62",
         wind: "22"
       };
+
+    let CurrentLocationData = {
+        city: "Vienna",
+        time: "09:44",
+        condition: "Clear Sky"
+      };
+
       return (
         <div className="Weather">
+          <div className="CurrentLocation">
+            <h1>{CurrentLocationData.city}</h1>
+            <hr />
+            <h2>
+              <div>{CurrentLocationData.time}</div>
+              <div>{CurrentLocationData.condition}</div>
+            </h2>
+          </div>
           <div className="row">
             <div className="col-sm-2 current-temp">
               {WeatherTodayData.temperature}
@@ -20,9 +35,11 @@ export default function Weather() {
               <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="mostly-sunny"/>
             </div>
             <div className="col-sm-5 weather-parameters">
-                <p>Precipitation: {WeatherTodayData.precipitation} mm</p>
-                <p>Humidity: {WeatherTodayData.humidity}%</p>
-                <p>Wind: {WeatherTodayData.wind} km/h</p>
+                <ul>
+                  <li>Precipitation: {WeatherTodayData.precipitation} mm</li>
+                  <li>Humidity: {WeatherTodayData.humidity}%</li>
+                  <li>Wind: {WeatherTodayData.wind} km/h</li>
+                </ul>
             </div>
           </div>
         </div>

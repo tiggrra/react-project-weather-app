@@ -1,3 +1,28 @@
+.Weather {
+  background: #d9e4e7;
+  padding: 10px 20px;
+  border: 1px solid #ebebf1;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.Weather .CurrentLocation h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.Weather .CurrentLocation h2 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.Weather .CurrentLocation hr {
+  color: #919ca4;
+  margin: 10px 0;
+}
+
 .Weather .row {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -28,9 +53,10 @@
     font-size: 50px;
   }
   
-  .Weather .weather-parameters p {
+  .Weather .weather-parameters li {
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.2;
     font-size: 16px;
+    list-style: none;
   }
   
