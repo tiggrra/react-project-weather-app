@@ -1,6 +1,5 @@
 import React from "react";
 import SearchEngine from "./SearchEngine";
-import Weather from "./Weather";
 
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
@@ -10,7 +9,6 @@ function App() {
     <div className="App">
       <div className="container">
         <SearchEngine />
-        <Weather/>
         <footer>
           <div className="Footer">
             <p>
