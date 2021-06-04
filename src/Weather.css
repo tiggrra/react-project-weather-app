@@ -1,3 +1,36 @@
-.Weather {
-    text-align: center;
-}
+.Weather .row {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .Weather .current-temp {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .Weather .measure-unit {
+    font-size: 20px;
+    vertical-align: top;
+  }
+  
+  .Weather .measure-unit a {
+    color: #303232;
+    text-decoration: none;
+  }
+  
+  .Weather .measure-unit a:hover {
+    color: #919ca4;
+    cursor: pointer;
+  }
+  
+  .Weather .fas {
+    font-size: 50px;
+  }
+  
+  .Weather .weather-parameters p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  
