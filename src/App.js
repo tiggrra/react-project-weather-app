@@ -1,3 +1,4 @@
+import React from "react";
 import SearchEngine from "./SearchEngine";
 import Weather from "./Weather";
 
