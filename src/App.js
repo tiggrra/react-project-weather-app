@@ -6,6 +6,16 @@ function App() {
     <div className="App">
       <div className="container">
      React Weather app
+     <footer>
+     <div className="Footer">
+      <p>
+        Open-source code by{" "}
+        <a href="https://github.com/tiggrra/react-project-weather-app" target="_blank" rel="noreferrer">
+          tiggrra
+        </a>
+      </p>
+    </div>
+     </footer>
       </div>
     </div>
   );
