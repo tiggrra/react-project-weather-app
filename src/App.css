@@ -9,3 +9,13 @@
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 
+footer {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #919ca4;
+}
+
