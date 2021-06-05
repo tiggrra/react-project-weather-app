@@ -5,21 +5,20 @@ import Weather from "./Weather";
 
 import "./SearchEngine.css";
 
-export default function SearchEngine() {
+export default function SearchEngine(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
 
     function handleResponse(response) {
-    let iconId = response.data.weather[0].icon;
-    let iconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
         setWeatherData({
-            icon: iconUrl,
-            date: "Saturday, 10:15",
+            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            city: response.data.name,
+            date: new Date(response.data.dt * 1000),
             temperature: response.data.main.temp,
             condition: response.data.weather[0].description,
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             ready: true
-    })
+        })
     }
 
     if (weatherData.ready) {
@@ -36,22 +35,20 @@ export default function SearchEngine() {
                 </div>
                 <div>
                     <Weather
-                        city="Vienna"
+                        city={weatherData.city}
                         date={weatherData.date}
                         temperature={Math.round(weatherData.temperature)}
                         condition={weatherData.condition}
                         humidity={weatherData.humidity}
                         wind={Math.round(weatherData.wind * 3.6)}
-                        icon={weatherData.icon}
+                        icon={weatherData.iconUrl}
                     />
                 </div>
             </div>
         );
     } else {
         const apiKey = "01bc9da346c1591ec92736f4f11269b6";
-        let city = "Vienna";
-        let apiUnit = "metric";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${apiUnit}`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${props.defaultUnit}`;
         axios.get(apiUrl).then(handleResponse);
 
         return "Loading..."

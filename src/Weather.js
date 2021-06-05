@@ -1,4 +1,5 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
 
 import "./Weather.css";
 
@@ -8,7 +9,7 @@ export default function Weather(props) {
             <h1>{props.city}</h1>
             <hr />
             <h2>
-                <div>{props.date}</div>
+                <div><FormattedDate date={props.date}/></div>
                 <div className="text-capitalize">{props.condition}</div>
             </h2>
             <div className="row">
