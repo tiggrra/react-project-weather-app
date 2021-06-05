@@ -53,9 +53,6 @@ export default function SearchEngine(props) {
                             value="Search"
                         />
                     </form>
-                    <button type="button" className="btn btn-secondary btn-sm">
-                        Current location
-                    </button>
                 </div>
                 <div>
                     <Weather
