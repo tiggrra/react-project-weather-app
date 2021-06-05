@@ -18,7 +18,7 @@ export default function Weather(props) {
                     <a href="/">°C</a> | <a href="/">°F</a>
                 </div>
                 <div className="col-sm-3">
-                    <img src={props.data.iconUrl} alt="weather-icon" />
+                    <img src={props.data.iconUrl} alt={props.data.condition} />
                 </div>
                 <div className="col-sm-5 weather-parameters">
                     <ul>
