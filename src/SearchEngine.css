@@ -19,6 +19,10 @@
     font-size: 14px;
     margin-right: 10px;
   }
+
+  .SearchEngine .search-input input:focus {
+    outline-color: #919ca4;
+  }
   
   .SearchEngine ::placeholder {
     color: #919ca4;
