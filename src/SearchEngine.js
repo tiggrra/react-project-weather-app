@@ -6,25 +6,23 @@ import Weather from "./Weather";
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
-    const [ready, setReady] = useState(false);
-    const [temperature, setTemperature] = useState(null);
-    const [condition, setCondition] = useState(null);
-    const [humidity, setHumidity] = useState(null);
-    const [wind, setWind] = useState(null);
-    const [icon, setIcon] = useState(null);
+    const [weatherData, setWeatherData] = useState({ ready: false });
 
     function handleResponse(response) {
     let iconId = response.data.weather[0].icon;
     let iconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
-    setIcon(iconUrl);
-    setTemperature(response.data.main.temp);
-    setCondition(response.data.weather[0].description);
-    setHumidity(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setReady(true);
+        setWeatherData({
+            icon: iconUrl,
+            date: "Saturday, 10:15",
+            temperature: response.data.main.temp,
+            condition: response.data.weather[0].description,
+            humidity: response.data.main.humidity,
+            wind: response.data.wind.speed,
+            ready: true
+    })
     }
 
-    if (ready) {
+    if (weatherData.ready) {
         return (
             <div className="SearchEngine">
                 <div className="search-form">
@@ -39,11 +37,12 @@ export default function SearchEngine() {
                 <div>
                     <Weather
                         city="Vienna"
-                        temperature={Math.round(temperature)}
-                        condition={condition}
-                        humidity={humidity}
-                        wind={Math.round(wind * 3.6)}
-                        icon={icon}
+                        date={weatherData.date}
+                        temperature={Math.round(weatherData.temperature)}
+                        condition={weatherData.condition}
+                        humidity={weatherData.humidity}
+                        wind={Math.round(weatherData.wind * 3.6)}
+                        icon={weatherData.icon}
                     />
                 </div>
             </div>

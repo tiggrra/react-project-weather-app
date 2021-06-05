@@ -9,7 +9,7 @@ export default function Weather(props) {
             <hr />
             <h2>
                 <div>15:09</div>
-                <div>{props.condition}</div>
+                <div className="text-capitalize">{props.condition}</div>
             </h2>
             <div className="row">
                 <div className="col-sm-2 current-temp">{props.temperature}</div>
