@@ -3,7 +3,7 @@
     padding: 10px 20px;
     border: 1px solid #ebebf1;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
   }
   
 .Weather h1 {
@@ -26,6 +26,11 @@
 .Weather .row {
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.Weather .row img {
+    position: relative;
+    top: -26px;
 }
     
 .Weather .current-temp {
