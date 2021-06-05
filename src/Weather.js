@@ -20,7 +20,6 @@ export default function Weather(props) {
                 </div>
                 <div className="col-sm-5 weather-parameters">
                     <ul>
-                        <li>Precipitation: 0%</li>
                         <li>Humidity: {props.data.humidity}%</li>
                         <li>Wind: {props.data.wind} km/h</li>
                     </ul>
