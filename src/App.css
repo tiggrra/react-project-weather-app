@@ -3,19 +3,10 @@
   max-width: 650px;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 10px;
   color: #303232;
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 
-footer {
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 20px;
-}
-
-footer a {
-  color: #919ca4;
-}
 
