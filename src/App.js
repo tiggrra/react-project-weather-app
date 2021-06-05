@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <SearchEngine defaultCity="Vienna" defaultUnit="metric"/>
+        <SearchEngine defaultCity="Vienna" />
         <footer>
           <div className="Footer">
             <p>

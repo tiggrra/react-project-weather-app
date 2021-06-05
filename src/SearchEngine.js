@@ -8,7 +8,6 @@ import "./SearchEngine.css";
 export default function SearchEngine(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
-    const [unit, setUnit] = useState(props.defaultUnit);
 
     function handleResponse(response) {
         setWeatherData({
@@ -25,7 +24,7 @@ export default function SearchEngine(props) {
 
     function search() {
         const apiKey = "01bc9da346c1591ec92736f4f11269b6";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
     }
 
