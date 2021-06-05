@@ -13,10 +13,10 @@ export default function SearchEngine(props) {
             iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             city: response.data.name,
             date: new Date(response.data.dt * 1000),
-            temperature: response.data.main.temp,
+            temperature: Math.round(response.data.main.temp),
             condition: response.data.weather[0].description,
             humidity: response.data.main.humidity,
-            wind: response.data.wind.speed,
+            wind: Math.round(response.data.wind.speed * 3.6),
             ready: true
         })
     }
@@ -35,13 +35,7 @@ export default function SearchEngine(props) {
                 </div>
                 <div>
                     <Weather
-                        city={weatherData.city}
-                        date={weatherData.date}
-                        temperature={Math.round(weatherData.temperature)}
-                        condition={weatherData.condition}
-                        humidity={weatherData.humidity}
-                        wind={Math.round(weatherData.wind * 3.6)}
-                        icon={weatherData.iconUrl}
+                        data = {weatherData}
                     />
                 </div>
             </div>

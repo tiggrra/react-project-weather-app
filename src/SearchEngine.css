@@ -9,6 +9,8 @@
   .SearchEngine .search-input {
     display: inline;
     overflow: hidden;
+    width: auto;
+    height: 100%;
   }
   
   .SearchEngine .btn-secondary {
