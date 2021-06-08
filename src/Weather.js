@@ -9,7 +9,7 @@ export default function Weather(props) {
             <h1>{props.data.city}</h1>
             <hr />
             <h2>
-                <div><FormattedDate date={props.data.date}/></div>
+                <div className="current-date"><FormattedDate date={props.data.date}/></div>
                 <div className="text-capitalize">{props.data.condition}</div>
             </h2>
             <div className="row">

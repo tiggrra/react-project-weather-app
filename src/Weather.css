@@ -17,6 +17,10 @@
     font-weight: normal;
     line-height: 1.5;
   }
+
+.Weather h2 .current-date {
+    font-size: 14px;
+}
   
 .Weather hr {
     color: #919ca4;
