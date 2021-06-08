@@ -1,6 +1,5 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import Temperature from "./Temperature";
 
 import "./Weather.css";
 
@@ -14,7 +13,10 @@ export default function Weather(props) {
                 <div className="text-capitalize">{props.data.condition}</div>
             </h2>
             <div className="row">
-                <div className="col-sm-4"><Temperature celsius={props.data.temperature}/></div>
+                <div className="col-sm-4 current-temp">
+                    {Math.round(props.data.temperature)}
+                    <span className="measure-unit"> °C</span>
+                </div>
                 <div className="col-sm-3">
                     <img src={props.data.iconUrl} alt={props.data.condition} />
                 </div>
