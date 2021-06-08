@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 
 import "./SearchEngine.css";
 
@@ -13,6 +14,7 @@ export default function SearchEngine(props) {
         setWeatherData({
             iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             city: response.data.name,
+            coordinates: response.data.coord,
             date: new Date(response.data.dt * 1000),
             temperature: Math.round(response.data.main.temp),
             condition: response.data.weather[0].description,
@@ -57,6 +59,11 @@ export default function SearchEngine(props) {
                 <div>
                     <Weather
                         data = {weatherData}
+                    />
+                </div>
+                <div>
+                    <Forecast
+                        coordinates = {weatherData.coordinates}
                     />
                 </div>
             </div>
