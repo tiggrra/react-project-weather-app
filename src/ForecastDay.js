@@ -18,7 +18,7 @@ export default function ForecastDay(props) {
     return (
         <div className="ForecastDay">
             <div className="Forecast-day"><strong>{day()}</strong></div>
-            <img src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} alt="Forecast-icon" />
+            <img src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} alt="Forecast-icon" />
             <div>
                 <span className="Forecast-temp-max">{maxTemp()}</span>
                 <span className="Forecast-temp-min">{minTemp()}</span>

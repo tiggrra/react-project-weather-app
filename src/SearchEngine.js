@@ -12,7 +12,7 @@ export default function SearchEngine(props) {
 
     function handleResponse(response) {
         setWeatherData({
-            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             city: response.data.name,
             coordinates: response.data.coord,
             date: new Date(response.data.dt * 1000),
